@@ -1,0 +1,15 @@
+Package: notion.R
+Title: Notion API for R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given  = "Troy James", 
+           family = "Palanca", 
+           email  = "mail@tjpalanca.com", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0610-9213"))
+Description: Notion is a new tool that blends many different work tools into 
+  one. This package provides utilities for dealing with the Notion API from R.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
