@@ -4,7 +4,7 @@ user <- function(id, ...,
                  avatar_url = NULL) {
 
   type <- match_arg(type)
-  object(
+  pkg_object(
     object = "user",
     id     = assert_uuid(id),
     type   = assert_string(type),
@@ -17,8 +17,8 @@ user <- function(id, ...,
 
 user_id <- function(id) {
 
-  object(id = assert_uuid(id)) %>%
-    add_class("user_id")
+  assert_uuid(id) %>%
+    add_class(pkg_class("user_id"))
 
 }
 
@@ -71,5 +71,25 @@ as_user.list <- function(x) {
   } else {
     stop("User type not known")
   }
+
+}
+
+# Methods -----------------------------------------------------------------
+
+#' @export
+retrieve.user_id <- function(x) get_user(x)
+
+#' @export
+retrieve.user <- function(x) retrieve(user_id(x$id))
+
+# Helpers -----------------------------------------------------------------
+
+get_user <- function(user_id) {
+
+  notion_api() %>%
+    req_url_path_append("users", assert_string(user_id)) %>%
+    req_perform() %>%
+    resp_body_json() %>%
+    as_user()
 
 }

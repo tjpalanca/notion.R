@@ -32,4 +32,6 @@ NULL
 
 pkg_name <- function() "notion.R"
 
-pkg_class <- function(...) c(..., pkg_name())
+pkg_class <- function(...) c(..., "notion")
+
+pkg_object <- function(...) structure(list(...), class = pkg_class())

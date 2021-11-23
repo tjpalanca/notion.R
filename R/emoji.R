@@ -1,6 +1,6 @@
 emoji <- function(emoji) {
 
-  object(type  = "emoji", emoji = assert_string(emoji)) %>%
+  pkg_object(type  = "emoji", emoji = assert_string(emoji)) %>%
     add_class("emoji")
 
 }

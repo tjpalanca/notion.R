@@ -5,7 +5,7 @@ richtext <- function(plain_text,
                      ...) {
 
   type <- match_arg(type) %||% "text"
-  object(
+  pkg_object(
     plain_text  = assert_string(plain_text),
     href        = assert_string(href, null.ok = TRUE),
     annotations = assert_class(annotations, pkg_class("richtext_annotations")),
@@ -48,7 +48,7 @@ richtext_annotations <- function(
 ) {
 
   color <- match_arg(color) %||% "default"
-  object(
+  pkg_object(
     bold          = assert_flag(bold),
     italic        = assert_flag(italic),
     strikethrough = assert_flag(strikethrough),

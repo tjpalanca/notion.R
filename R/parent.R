@@ -1,6 +1,6 @@
 parent <- function(...) {
 
-  object(...) %>%
+  pkg_object(...) %>%
     add_class("parent")
 
 }

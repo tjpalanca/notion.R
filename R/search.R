@@ -36,6 +36,8 @@ search_api_call <- function(query           = "",
       ),
       start_cursor = start_cursor,
       page_size = page_size
-    ))
+    )) %>%
+    req_perform() %>%
+    resp_body_json()
 
 }

@@ -9,7 +9,7 @@ property <- function(id,
                      ...) {
 
   type <- match_arg(type)
-  object(
+  pkg_object(
     id   = assert_string(id),
     name = assert_string(name),
     type = assert_string(type),
@@ -71,7 +71,7 @@ select_option <- function(id, name,
                           )) {
 
   color <- match_arg(color) %||% "default"
-  object(id = id, name = name, color = assert_string(color)) %>%
+  pkg_object(id = id, name = name, color = assert_string(color)) %>%
     add_class("select_option")
 
 }
@@ -95,7 +95,7 @@ multi_select_option <- function(id, name,
                                 )) {
 
   color <- match_arg(color) %||% "default"
-  object(id = id, name = name, color = assert_string(color)) %>%
+  pkg_object(id = id, name = name, color = assert_string(color)) %>%
     add_class("multi_select_option")
 
 }

@@ -9,7 +9,7 @@ NULL
 
 file <- function(url, ...) {
 
-  object(url = assert_string(url), ...) %>%
+  pkg_object(url = assert_string(url), ...) %>%
     add_class("file")
 
 }
