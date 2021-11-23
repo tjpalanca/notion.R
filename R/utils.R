@@ -21,7 +21,7 @@ assert_uuid <- function(x, ...) {
 
   assert_string(
     x,
-    pattern = "[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}"
+    pattern = "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
   )
 
 }

@@ -21,6 +21,13 @@ database <- function(id, created_time, last_edited_time,
 
 }
 
+database_id <- function(id) {
+
+  object(id = assert_string(id)) %>%
+    add_class("database_id")
+
+}
+
 # Conversions -------------------------------------------------------------
 
 as_database <- function(x) UseMethod("as_database")
@@ -54,3 +61,6 @@ as_database.list <- function(x) {
     exec(database, !!!.)
 
 }
+
+# Methods -----------------------------------------------------------------
+
