@@ -15,3 +15,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 URL: https://github.com/tjpalanca/notion.R
 BugReports: https://github.com/tjpalanca/notion.R/issues
+Imports: 
+    checkmate,
+    emojifont,
+    httr2,
+    lubridate,
+    magrittr,
+    purrr,
+    rlang
